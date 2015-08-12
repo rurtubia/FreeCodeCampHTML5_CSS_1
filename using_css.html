@@ -2,6 +2,7 @@
 	<head></head>
 	<body>
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'/>
 		<style>
 			.red-text{
 				color: red;
@@ -49,35 +50,36 @@
 		</style>
 
 		<!--This is an HTML comment-->
-
-		<h2 class="red-text">CatPhotoApp</h2>
-		<p>Click here for <a href="#">Cat Photos</a></p>
-		<a href="#"><img class="smaller-image thick-green-border" src="http://bit.ly/fcc-kittens" alt="A cute orange cat lying on its back"></a>
-		<div class="grey-background">
-			<p>Things cats love:</p>
-			<ul>
-				<li>Catching insects</li>
-				<li>Going in and out of the house</li>
-				<li>Meowing to humans</li>
-			</ul>
-			<p>Things cats hate</p>
-			<ol>
-				<li>Humans who can't feed them</li>
-				<li>Insects</li>
-				<li>Dogs</li>
-			</ol>
+		<div class="container-fluid">
+			<h2 class="red-text">CatPhotoApp</h2>
+			<p>Click here for <a href="#">Cat Photos</a></p>
+			<a href="#"><img class="smaller-image thick-green-border" src="http://bit.ly/fcc-kittens" alt="A cute orange cat lying on its back"></a>
+			<div class="grey-background">
+				<p>Things cats love:</p>
+				<ul>
+					<li>Catching insects</li>
+					<li>Going in and out of the house</li>
+					<li>Meowing to humans</li>
+				</ul>
+				<p>Things cats hate</p>
+				<ol>
+					<li>Humans who can't feed them</li>
+					<li>Insects</li>
+					<li>Dogs</li>
+				</ol>
+			</div>
+			<form action="/submit-cat-photo" id="cat-photo-form">
+				<input type="text" placeholder="Cat photo URL" required>
+				<button type="submit">Submit</button>
+				<p>
+				<label><input type="radio" name="indoor-outdoor" checked>indoor</label>
+				<label><input type="radio" name="indoor-outdoor">outdoor</label>
+				<p>
+				<label><input type="checkbox" name="personality" checked>happy</label>
+				<label><input type="checkbox" name="personality">angry</label>
+				<label><input type="checkbox" name="personality">neutral</label>
+				<p>
+			</form>
 		</div>
-		<form action="/submit-cat-photo" id="cat-photo-form">
-			<input type="text" placeholder="Cat photo URL" required>
-			<button type="submit">Submit</button>
-			<p>
-			<label><input type="radio" name="indoor-outdoor" checked>indoor</label>
-			<label><input type="radio" name="indoor-outdoor">outdoor</label>
-			<p>
-			<label><input type="checkbox" name="personality" checked>happy</label>
-			<label><input type="checkbox" name="personality">angry</label>
-			<label><input type="checkbox" name="personality">neutral</label>
-			<p>
-		</form>
 	</body>
 </html>
